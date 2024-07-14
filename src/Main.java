@@ -9,6 +9,6 @@ public class Main {
         hilo1.start();
         hilo2.start();
 
-        System.out.println("Finalizando el main");        
+        System.out.println("Finalizando el main");
     }
 }

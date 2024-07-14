@@ -3,17 +3,20 @@ package clases;
 public class Subhilo extends Thread{
 
 	int n;
+	String nombre;
 
-	public Subhilo(int n){
-		System.out.println("Creando un subhilo del hilo "+n);
-		this.n = n;
+	public Subhilo(String nom,int n){
+		this.nombre = nom;
+		this.n= n;
+		System.out.println("Creando subhilo " + this.nombre + "del hilo " + this.n);
+
 	}
 
 	@Override
 	public void run(){
 		
 		for (int i = 1; i<11; i++){
-			System.out.println(i+"-SubHilo de "+this.n);
+			System.out.println(i+"-SubHilo " + this.nombre + " de "+this.n);
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
@@ -21,6 +24,14 @@ public class Subhilo extends Thread{
 			}
 		}
 
-		System.out.println("Finalizando el subhilo de " + this.n);
+		System.out.println("Finalizando el subhilo " + this.nombre + " del hilo " + this.n);
+	}
+
+	public String getNombre() {
+		return this.nombre;
+	}
+	
+	public int getN(){
+		return this.n;
 	}
 }

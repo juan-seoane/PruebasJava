@@ -3,12 +3,16 @@ package clases;
 public class Hilo extends Thread{
 
 	int n;
+	String nombre;
 
 	public Hilo(int n){
 		this.n = n;
 		System.out.println("Creando el hilo " + n);
-		Subhilo subhilo = new Subhilo(n);
-		subhilo.start();
+		Subhilo subhilo1 = new Subhilo("primero", n);
+		Subhilo subhilo2 = new Subhilo("segundo", n);
+
+		subhilo1.start();
+		subhilo2.start();
 	}
 
 	@Override
@@ -22,7 +26,6 @@ public class Hilo extends Thread{
 				e.printStackTrace();
 			}
 		}
-
 		System.out.println("Finalizando el hilo " + this.n);
 	}
 }

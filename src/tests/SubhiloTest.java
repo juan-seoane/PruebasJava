@@ -11,6 +11,14 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class SubhiloTest {
+import clases.Subhilo;
 
+public class SubhiloTest {
+	@Test
+	public void subhiloConstruidoOK(){
+
+		var s1 = new Subhilo("primero", 1);
+		assertEquals(s1.getNombre(), "primero");
+		assertEquals(s1.getN(), 1);
+	}
 }
