@@ -17,6 +17,7 @@ public class SubhiloTest {
 	@Test
 	public void subhiloConstruidoOK(){
 
+		System.out.println("[SubhiloTest] Este texto fue escrito en Windows");
 		var s1 = new Subhilo("primero", 1);
 		assertEquals(s1.getNombre(), "primero");
 		assertEquals(s1.getN(), 1);

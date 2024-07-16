@@ -21,7 +21,7 @@ public class HiloTest {
 
     @Test
     public void camposHiloOK(){
-        System.out.println("[HiloTest] Esto fue añadido desde Linux");
+        System.out.println("[HiloTest] Esto fue escrito en Linux y corregido en Windows");
         Hilo hilo1 = new Hilo(1);
         assertNotNull(hilo1.getN());
     }

@@ -35,7 +35,7 @@ public class Hilo extends Thread{
 	}
 
     public Object getN() {
-		System.out.println("[Hilo>getN] añadido desde Linux");
+		System.out.println("[Hilo>getN] escrito desde Linux y corregido en Windows");
         return this.n;
     }
 }
