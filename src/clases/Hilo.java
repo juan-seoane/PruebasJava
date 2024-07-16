@@ -4,13 +4,18 @@ public class Hilo extends Thread{
 
 	int n;
 	String nombre;
+	Subhilo subhilo1;
+	Subhilo subhilo2;
 
 	public Hilo(int n){
 		this.n = n;
 		System.out.println("Creando el hilo " + n);
-		Subhilo subhilo1 = new Subhilo("primero", n);
-		Subhilo subhilo2 = new Subhilo("segundo", n);
+		subhilo1 = new Subhilo("primero", n);
+		subhilo2 = new Subhilo("segundo", n);
 
+	}
+
+	public void arrancarSubhilos(){
 		subhilo1.start();
 		subhilo2.start();
 	}
@@ -28,4 +33,9 @@ public class Hilo extends Thread{
 		}
 		System.out.println("Finalizando el hilo " + this.n);
 	}
+
+    public Object getN() {
+		System.out.println("[Hilo>getN] añadido desde Linux");
+        return this.n;
+    }
 }

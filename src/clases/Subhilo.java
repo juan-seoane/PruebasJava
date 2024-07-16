@@ -8,7 +8,7 @@ public class Subhilo extends Thread{
 	public Subhilo(String nom,int n){
 		this.nombre = nom;
 		this.n= n;
-		System.out.println("Creando subhilo " + this.nombre + "del hilo " + this.n);
+		System.out.println("Creando subhilo " + this.nombre + " del hilo " + this.n);
 
 	}
 
@@ -16,7 +16,7 @@ public class Subhilo extends Thread{
 	public void run(){
 		
 		for (int i = 1; i<11; i++){
-			System.out.println(i+"-SubHilo " + this.nombre + " de "+this.n);
+			System.out.println(i+" - SubHilo " + this.nombre + " del hilo "+this.n);
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {

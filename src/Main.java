@@ -7,7 +7,9 @@ public class Main {
         Hilo hilo2 = new Hilo(2);
 
         hilo1.start();
+        hilo1.arrancarSubhilos();
         hilo2.start();
+        hilo2.arrancarSubhilos();
 
         System.out.println("Finalizando el main");
     }
