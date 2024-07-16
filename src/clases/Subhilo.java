@@ -15,7 +15,7 @@ public class Subhilo extends Thread{
 	@Override
 	public void run(){
 		
-		for (int i = 1; i<11; i++){
+		for (int i = 1; i<=5; i++){
 			System.out.println(i+" - SubHilo " + this.nombre + " del hilo "+this.n);
 			try {
 				Thread.sleep(500);
